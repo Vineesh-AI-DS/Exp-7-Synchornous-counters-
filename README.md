@@ -67,49 +67,54 @@ RegisterNumber: 212221230122
 ```
 #### UP COUNTER:
 ```
-module sync(clk,A);
+module upcounter(clk,A);
 input clk;
-output reg [0:2]A;
+output reg[0:3]A;
 always@(posedge clk)
 begin
-   A[0]=(((A[1])&(A[2]))^A[0]);
-	A[1]=(A[2])^A[1];
-	A[2]=1^A[2];
+		A[0]=((((A[1])&(A[2]))&A[3])^A[0]);
+		A[1]=(((A[2])&(A[3]))^A[1]);
+		A[2]=((A[3])^A[2]);
+		A[3]=1^A[3];
 end
 endmodule
 ```
 #### DOWN COUNTER:
 ```
-module down(input clk,input reset,output[0:3]counter);
-reg[0:3] counter_down;
-always@(posedge clk or posedge reset)
+module downcounter(clk,A);
+input clk;
+output reg[0:3]A;
+always@(posedge clk)
 begin
-if(reset)
-counter_down<=4'd0;
-else
-counter_down<=counter_down-4'd1;
+	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
+	A[1]=(((A[2])&(A[3]))^A[1]);
+	A[2]=((A[3])^A[2]);
+	A[3]=1^A[3];
 end
-assign counter=counter_down;
 endmodule
 ```
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 #### UP COUNTER:
-![IO1](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/cc9b96d8-ab13-49e2-84e6-749753424772)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/21d35ebc-d1ce-440b-be2f-b0391f88126c)
+
 
 #### DOWN COUNTER:
 
-![IO2](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/0ee73832-162f-4c90-99b8-11a602c350b2)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/52f17657-2a86-4645-85ea-7b60db532c96)
+
 
 
 ### TIMING DIGRAMS FOR COUNTER  
 #### UP COUNTER:
-![IO3](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/5f23a49e-128f-42b4-931e-2d66460cbcff)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/a37ad2bd-8a6b-4e1a-b0e5-61b8fe86fb2c)
+
 
 
 #### DOWN COUNTER:
 
-![IO4](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/45c06692-9b3a-45cd-9cdd-c55a624acdc5)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/a097bfcc-e89f-4747-be08-63b5675f7f00)
+
 
 
 
@@ -117,10 +122,12 @@ endmodule
 
 #### UP COUNTER:
 
-![IO5](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/298e7d52-734a-423b-accd-f5721916b3e3)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/d081b366-048b-4196-a504-b0bb6c99f540)
+
 
 #### DOWN COUNTER:
-![IO6](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/751e50ec-1107-4c0e-a8f9-5150ba8accd4)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/54ef5109-a868-4a23-85cb-d6662257efae)
+
 
 
 
