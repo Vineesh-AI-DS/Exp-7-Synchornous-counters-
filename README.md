@@ -127,7 +127,9 @@ endmodule
 
 #### DOWN COUNTER:
 
-![Uploading deeee.jpg…]()
+![deeee](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/0e355822-21c9-471a-8990-82f75edc2feb)
+
+
 
 
 ### RESULTS:
