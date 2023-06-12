@@ -67,29 +67,29 @@ RegisterNumber: 212221230122
 ```
 #### UP COUNTER:
 ```
-module upcounter(clk,A);
+module upcounter(clk,a);
 input clk;
-output reg[0:3]A;
+output reg[3:0]a;
 always@(posedge clk)
 begin
-		A[0]=((((A[1])&(A[2]))&A[3])^A[0]);
-		A[1]=(((A[2])&(A[3]))^A[1]);
-		A[2]=((A[3])^A[2]);
-		A[3]=1^A[3];
+a[3]=(a[2] & a[1] & a[0]) ^ a[3];
+a[2]=(a[1] & a[0]) ^ a[2];
+a[1]=(a[0] ^ a[1]);
+a[0]=1 ^ a[0];
 end
 endmodule
 ```
 #### DOWN COUNTER:
 ```
-module downcounter(clk,A);
+module downcounter(clk,a);
 input clk;
-output reg[0:3]A;
+output reg[3:0]a;
 always@(posedge clk)
 begin
-	A[0]=((((~A[1])&(~A[2]))&A[3])^A[0]);
-	A[1]=(((A[2])&(A[3]))^A[1]);
-	A[2]=((A[3])^A[2]);
-	A[3]=1^A[3];
+a[3]=(~a[2] & ~a[1] & ~a[0])^ a[3];
+a[2]=(~a[1] & ~a[0]) ^ a[2];
+a[1]=(~a[0] ^ a[1]);
+a[0]=1 ^ a[0];
 end
 endmodule
 ```
