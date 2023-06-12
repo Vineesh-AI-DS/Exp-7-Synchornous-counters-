@@ -1,8 +1,10 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
 ### AIM:
 To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### HARDWARE REQUIRED:
+– PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:  
+Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -97,39 +99,34 @@ endmodule
 
 ### RTL LOGIC UP COUNTER AND DOWN COUNTER  
 #### UP COUNTER:
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/21d35ebc-d1ce-440b-be2f-b0391f88126c)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/2c9e5b35-640f-4b51-a338-1257b0225444)
+
 
 
 #### DOWN COUNTER:
-
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/52f17657-2a86-4645-85ea-7b60db532c96)
-
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/c216fe7e-bf7b-4aba-89a8-8ba0791ddf30)
 
 
 ### TIMING DIGRAMS FOR COUNTER  
 #### UP COUNTER:
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/a37ad2bd-8a6b-4e1a-b0e5-61b8fe86fb2c)
-
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/5a036e6e-2d44-4381-a448-4ab6aa9cb768)
 
 
 #### DOWN COUNTER:
 
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/a097bfcc-e89f-4747-be08-63b5675f7f00)
-
-
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/bd5bf619-4ffd-4e0f-adee-2e1113f28b66)
 
 
 ### TRUTH TABLE 
 
 #### UP COUNTER:
 
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/d081b366-048b-4196-a504-b0bb6c99f540)
+![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/7a81a71c-0da6-4e4c-b211-e80894c01208)
+
 
 
 #### DOWN COUNTER:
-![image](https://github.com/Vineesh-AI-DS/Exp-7-Synchornous-counters-/assets/93427254/54ef5109-a868-4a23-85cb-d6662257efae)
-
-
+![Uploading image.png…]()
 
 
 
